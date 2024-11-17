@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProMeuble Service</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Redirection automatique après 3 secondes
+        function showThankYouMessage() {
+            const formSection = document.getElementById('contact');
+            const thankYouMessage = document.createElement('div');
+            thankYouMessage.id = 'thank-you';
+            thankYouMessage.innerHTML = `
+                <p>Merci pour votre message. Nous vous recontacterons dans les 24 heures.</p>
+            `;
+            thankYouMessage.style.textAlign = 'center';
+            thankYouMessage.style.marginTop = '20px';
+            thankYouMessage.style.fontSize = '1.5em';
+
+            formSection.innerHTML = '';
+            formSection.appendChild(thankYouMessage);
+
+            // Redirection vers la page d'accueil après 3 secondes
+            setTimeout(() => {
+                window.location.href = '#home';
+            }, 3000);
+        }
+    </script>
 </head>
 <body>
     <!-- Menu général -->
@@ -29,7 +51,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="logo.jpg" alt="Logo ProMeuble Service"> <!-- Chemin modifié -->
+                <img src="images/logo.jpg" alt="Logo ProMeuble Service">
             </div>
             <div class="header-text">
                 <h1>ProMeuble Service</h1>
@@ -44,17 +66,16 @@
         <div class="service">
             <h3>Montage de Meubles et Mobiliers de Bureaux</h3>
             <div class="gallery" id="meuble-mobilier">
-                <!-- Ajoutez vos images ici -->
                 <div class="service-item">
-                    <img src="prestation1.jpg" alt="Prestation 1"> <!-- Chemin modifié -->
+                    <img src="images/prestation1.jpg" alt="Prestation 1">
                     <p>Montage de meubles</p>
                 </div>
                 <div class="service-item">
-                    <img src="prestation2.jpg" alt="Prestation 2"> <!-- Chemin modifié -->
+                    <img src="images/prestation2.jpg" alt="Prestation 2">
                     <p>Montage de bureaux</p>
                 </div>
                 <div class="service-item">
-                    <img src="prestation3.jpg" alt="Prestation 3"> <!-- Chemin modifié -->
+                    <img src="images/prestation3.jpg" alt="Prestation 3">
                     <p>Montage de lits et canapés</p>
                 </div>
             </div>
@@ -62,17 +83,16 @@
         <div class="service">
             <h3>Services à Domicile</h3>
             <div class="gallery" id="service-domicile">
-                <!-- Ajoutez vos images ici -->
                 <div class="service-item">
-                    <img src="prestation4.jpg" alt="Prestation 4"> <!-- Chemin modifié -->
+                    <img src="images/prestation4.jpg" alt="Prestation 4">
                     <p>Installation de luminaires</p>
                 </div>
                 <div class="service-item">
-                    <img src="prestation5.jpg" alt="Prestation 5"> <!-- Chemin modifié -->
+                    <img src="images/prestation5.jpg" alt="Prestation 5">
                     <p>Installation de stores</p>
                 </div>
                 <div class="service-item">
-                    <img src="prestation6.jpg" alt="Prestation 6"> <!-- Chemin modifié -->
+                    <img src="images/prestation6.jpg" alt="Prestation 6">
                     <p>Livraison de meubles</p>
                 </div>
             </div>
@@ -85,13 +105,18 @@
         <p>Email : <a href="mailto:promeubleservice@gmail.com">promeubleservice@gmail.com</a></p>
         <p>Téléphone : <a href="tel:+32466260630">+32 466 26 06 30</a></p>
         <p>TVA : 1013.656.235</p>
-        <form action="#" method="post">
+
+        <!-- Formulaire de contact -->
+        <form action="https://formspree.io/f/xkgnznzd" method="post" onsubmit="event.preventDefault(); showThankYouMessage();">
             <label for="name">Votre nom :</label>
             <input type="text" id="name" name="name" required>
+            
             <label for="email">Votre email :</label>
             <input type="email" id="email" name="email" required>
+            
             <label for="message">Votre message :</label>
             <textarea id="message" name="message" required></textarea>
+            
             <button type="submit">Envoyer</button>
         </form>
     </section>
@@ -100,19 +125,17 @@
     <section id="avis">
         <h2>Ce que disent nos clients</h2>
         <div class="avis-container">
-            <!-- Exemple d'avis -->
             <blockquote>
                 <p>"Service rapide et professionnel, je recommande !"</p>
                 <footer>- Client satisfait</footer>
             </blockquote>
-            <!-- Ajoutez d'autres avis ici -->
         </div>
     </section>
 
     <!-- Pied de page -->
     <footer>
         <div class="logo-footer">
-            <img src="logo.jpg" alt="Logo ProMeuble Service"> <!-- Chemin modifié -->
+            <img src="images/logo.jpg" alt="Logo ProMeuble Service">
         </div>
         <p>&copy; 2024 ProMeuble Service. Tous droits réservés.</p>
     </footer>
