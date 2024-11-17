@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMeuble Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu général -->
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#services">Nos Prestations</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- Menu déroulant -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Menu</a>
+                <div class="dropdown-content">
+                    <a href="#montage">Montage de Meubles</a>
+                    <a href="#demenagement">Déménagement</a>
+                    <a href="#reparation">Réparation</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- En-tête -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Logo ProMeuble Service">
+            </div>
+            <div class="header-text">
+                <h1>ProMeuble Service</h1>
+                <p>Votre expert en montage de meubles et services à domicile</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Nos Services</h2>
+        <div class="service">
+            <h3>Montage de Meubles et Mobiliers de Bureaux</h3>
+            <div class="gallery" id="meuble-mobilier">
+                <!-- Ajoutez vos images ici -->
+                <div class="service-item">
+                    <img src="images/prestation1.jpg" alt="Prestation 1">
+                    <p>Montage de meubles</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/prestation2.jpg" alt="Prestation 2">
+                    <p>Montage de bureaux</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/prestation3.jpg" alt="Prestation 3">
+                    <p>Montage de lits et canapés</p>
+                </div>
+            </div>
+        </div>
+        <div class="service">
+            <h3>Services à Domicile</h3>
+            <div class="gallery" id="service-domicile">
+                <!-- Ajoutez vos images ici -->
+                <div class="service-item">
+                    <img src="images/prestation4.jpg" alt="Prestation 4">
+                    <p>Installation de luminaires</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/prestation5.jpg" alt="Prestation 5">
+                    <p>Installation de stores</p>
+                </div>
+                <div class="service-item">
+                    <img src="images/prestation6.jpg" alt="Prestation 6">
+                    <p>Livraison de meubles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <p>Email : <a href="mailto:promeubleservice@gmail.com">promeubleservice@gmail.com</a></p>
+        <p>Téléphone : <a href="tel:+32466260630">+32 466 26 06 30</a></p>
+        <p>TVA : 1013.656.235</p>
+        <form action="#" method="post">
+            <label for="name">Votre nom :</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Votre email :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Votre message :</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Avis -->
+    <section id="avis">
+        <h2>Ce que disent nos clients</h2>
+        <div class="avis-container">
+            <!-- Exemple d'avis -->
+            <blockquote>
+                <p>"Service rapide et professionnel, je recommande !"</p>
+                <footer>- Client satisfait</footer>
+            </blockquote>
+            <!-- Ajoutez d'autres avis ici -->
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="logo-footer">
+            <img src="images/logo.jpg" alt="Logo ProMeuble Service">
+        </div>
+        <p>&copy; 2024 ProMeuble Service. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
